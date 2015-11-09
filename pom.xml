@@ -7,6 +7,18 @@
 
   <repositories>
     <!-- Repository for Bukkit -->
+
+
+<repository>
+    <id>md5</id>
+    <url>http://repo.md-5.net/content/groups/public</url>
+</repository>
+
+<repository>
+    <id>dmulloy2-repo</id>
+    <url>http://repo.dmulloy2.net/content/groups/public/</url>
+  </repository>
+
     <repository>
       <id>bukkit-repo</id>
       <url>http://repo.bukkit.org/content/groups/public/</url>
@@ -38,7 +50,7 @@
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>1.7.9-R0.2-SNAPSHOT</version>
+      <version>1.7.9-R0.2</version>
     </dependency>
     
     <!-- CraftBukkit Dependency for experimental features
@@ -48,12 +60,21 @@
       <version>1.7.9-R0.1-SNAPSHOT</version>
     </dependency>-->        
     
-    <!-- LibsDiguises is required for hiding -->
-    <dependency>
-      <groupId>me.libraryaddict</groupId>
-      <artifactId>LibsDisguises</artifactId>
-      <version>7.6.4</version>
-    </dependency>
+
+<dependency>
+    <groupId>LibsDisguises</groupId>
+    <artifactId>LibsDisguises</artifactId>
+    <version>LATEST</version>
+</dependency>
+
+
+<dependency>
+    <groupId>com.comphenix.protocol</groupId>
+    <artifactId>ProtocolLib</artifactId>
+    <version>3.6.4</version>
+  </dependency>
+
+      
   </dependencies>
 
   <build>

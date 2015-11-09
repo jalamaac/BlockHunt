@@ -143,7 +143,7 @@ public class Arena implements ConfigurationSerializable {
 		return new Arena((String) M.g(map, "arenaName", "UNKNOWN_NAME"), (LocationSerializable) M.g(map, "pos1", loc), (LocationSerializable) M.g(map, "pos2", loc),
 				(Integer) M.g(map, "maxPlayers", 12), (Integer) M.g(map, "minPlayers", 3), (Integer) M.g(map, "amountSeekersOnStart", 1), (Integer) M.g(map, "timeInLobbyUntilStart", 90),
 				(Integer) M.g(map, "waitingTimeSeeker", 20), (Integer) M.g(map, "gameTime", 200), (Integer) M.g(map, "timeUntilHidersSword", 30),(Integer) M.g(map, "blockAnnouncerTime", 45),
-				(Boolean) M.g(map, "seekersCanHurtSeekers", false),(Boolean) M.g(map, "hidersCanHurtSeekers", false),(Boolean) M.g(map, "hidersCanHurtHiders", false),(Boolean) M.g(map, "seekersTakeFallDamage", false),(Boolean) M.g(map, "hidersTakeFallDamage", false),
+				(Boolean) M.g(map, "seekersCanHurtSeekers", true),(Boolean) M.g(map, "hidersCanHurtSeekers", true),(Boolean) M.g(map, "hidersCanHurtHiders", true),(Boolean) M.g(map, "seekersTakeFallDamage", true),(Boolean) M.g(map, "hidersTakeFallDamage", false),
 				(ArrayList<ItemStack>) M.g(map, "disguiseBlocks", new ArrayList<ItemStack>()),(LocationSerializable) M.g(map, "lobbyWarp", loc), (LocationSerializable) M.g(map, "hidersWarp", loc), (LocationSerializable) M.g(map, "seekersWarp", loc),
 				(LocationSerializable) M.g(map, "spawnWarp", loc), (ArrayList<String>) M.g(map, "seekersWinCommands", new ArrayList<String>()),
 				(ArrayList<String>) M.g(map, "hidersWinCommands", new ArrayList<String>()), (ArrayList<String>) M.g(map, "allowedCommands", new ArrayList<String>()),

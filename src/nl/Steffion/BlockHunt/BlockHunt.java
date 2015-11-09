@@ -301,10 +301,6 @@ public class BlockHunt extends JavaPlugin implements Listener {
 							player.getInventory().setChestplate(new ItemStack(Material.IRON_CHESTPLATE, 1));
 							player.getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS, 1));
 							player.getInventory().setBoots(new ItemStack(Material.IRON_BOOTS, 1));
-							ItemStack infBow = new ItemStack(Material.BOW, 1);
-							infBow.addEnchantment(Enchantment.ARROW_INFINITE, 1);
-							player.getInventory().setItem(1, infBow);
-							player.getInventory().setItem(2, new ItemStack(Material.ARROW, 1));
 							player.playSound(player.getLocation(), Sound.ANVIL_USE, 1, 1);
 						}
 
@@ -323,9 +319,11 @@ public class BlockHunt extends JavaPlugin implements Listener {
 						if (arena.timer > 0) {
 							if (arena.timer == arena.gameTime - arena.timeUntilHidersSword) {
 								ItemStack sword = new ItemStack(Material.WOOD_SWORD, 1);
+                                                                ItemStack flare = new ItemStack(Material.FIREWORK, 10);
 								sword.addUnsafeEnchantment(Enchantment.KNOCKBACK, 1);
 								for (Player arenaPlayer : arena.playersInArena) {
 									if (!arena.seekers.contains(arenaPlayer)) {
+                                                                                   arenaPlayer.getInventory().addItem(flare);
 										arenaPlayer.getInventory().addItem(sword);
 										MessageM.sendFMessage(arenaPlayer, ConfigC.normal_ingameGivenSword);
 									}
